@@ -30,4 +30,14 @@ public class Posts {
         this.content = content;
         this.author = author;
     }
+
+    /* JPA 영속성 컨텍스트 : 엔티티를 영구 저장하는 환경
+     * JPA EntityManager 활성화 된 상태로 트랜잭션안에서 데이터를 가져오면 영속성 컨텍스트가 유지된 상태.
+     * 이 상태에서 해당  데이터 값을 변경하면 트랜잭션이 끝나는 시점에 해당 테이블에 변경분을 반영.
+     * 즉, Entity객체 값만 변경하면 별도로 update를 날릴 필요가 없다. (=더티 체킹 =Dirty Checking)
+     */
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }

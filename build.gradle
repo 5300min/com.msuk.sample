@@ -27,6 +27,7 @@ repositories {
 
 dependencies { /* 버전을 명시하지 않아야 최상위에 설정한 springboot 버전을 따라간다. (버전관리 + 버전충돌 방지) */
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-mustache')
     compile('org.projectlombok:lombok')
     annotationProcessor('org.projectlombok:lombok')  /* 이게 없으니까 왜 lombok 적용이 안될까... ㅠㅠ */
     compile('org.springframework.boot:spring-boot-starter-data-jpa') /* spring boot용 spring-data-jpa 라이브러리 */

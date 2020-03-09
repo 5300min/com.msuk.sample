@@ -18,6 +18,29 @@
         </div>
     </div>
 
+    <br>
+    <!-- 목록 출력 영역 -->
+    <table class="table table-horizontal table-bordered">
+        <thead class="thead-strong">
+        <tr>
+            <th>게시글번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>최종수정일</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        {{#posts}} <!-- posts List 순환 시작 -->
+            <tr>
+                <td>{{id}}</td> <!-- 각 필드 -->
+                <td><a href="/posts/update/{{id}}">{{title}}</a></td>
+                <td>{{author}}</td>
+                <td>{{modifiedDate}}</td>
+            </tr>
+        {{/posts}} <!-- posts List 순환 끝 -->
+        </tbody>
+    </table>
+
     {{>layout/footer}}
 </body>
 </html>
